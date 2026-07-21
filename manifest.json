@@ -1,6 +1,6 @@
 {
-  "name": "Split3 — sibling expenses",
-  "short_name": "Split3",
+  "name": "Family Expenses",
+  "short_name": "Family Expenses",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
