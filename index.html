@@ -217,6 +217,7 @@ async function sync(){
     const pending = entries.filter(e=>!e.synced);
     if(pending.length){
       const r = await fetch(cfg.url, { method:"POST",
+        headers:{ "Content-Type":"text/plain;charset=utf-8" },
         body: JSON.stringify({ entries: pending.map(({synced, ...e})=>e) }) });
       const j = await r.json();
       if(j.ok){ entries.forEach(e=>{ e.synced = true }); persist(); }
